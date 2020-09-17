@@ -1,3 +1,4 @@
+"this file must to be save in ~/.config/nvim directory
 set title
 set number
 set relativenumber
