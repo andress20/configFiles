@@ -133,3 +133,4 @@ unset __conda_setup
 
 export PATH="/opt/apps-aristocratos/bashtop/:$PATH"
 export PATH="/opt/apps-aristocratos/bpytop/:$PATH"
+#kjdkldkfjdfj

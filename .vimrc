@@ -1,4 +1,3 @@
-"new line
 "this file must be save in home directory"
 "set nocompatible              " be iMproved, required
 filetype off                  " required
