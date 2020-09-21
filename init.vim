@@ -13,6 +13,7 @@ set mouse=a
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+"set smarttab
 set shiftround
 set spelllang=en,es
 
@@ -30,3 +31,27 @@ map <C-h> <C-W><C-H>
 map <C-l> <C-W><C-L>
 map <C-j> <C-W><C-J>
 map <C-k> <C-W><C-K>
+map <Tab> gt
+nmap <CR> :tabnew<CR>
+imap ( ()<left>
+imap { {}<left>
+inoremap {<cr> {<cr>}<ESC><S-o><Tab>
+imap [ []<left>
+inoremap " <c-r>=QuoteDelim('"')<CR>
+inoremap ' <c-r>=QuoteDelim("'")<CR>
+imap <C-Space> <ESC>
+
+function QuoteDelim(char)
+ let line = getline('.')
+ let col = col('.')
+ if line[col - 2] == "\\"
+ "Inserting a quoted quotation mark into the string
+ return a:char
+ elseif line[col - 1] == a:char
+ "Escaping out of the string
+ return "\<Right>"
+ else
+ "Starting a string
+ return a:char.a:char."\<Esc>i"
+ endif
+endf

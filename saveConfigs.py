@@ -1,8 +1,11 @@
 import os
 from shutil import copyfile
 
+# where you want to save all config files
 pathConfigs = "/home/andres/configFiles/"
 
+
+#--------------- list of files, path and name--------------
 #BASHRC
 pathBashrc = "/home/andres/"
 bashrc = ".bashrc"
@@ -19,6 +22,9 @@ nvim = "init.vim"
 pathRedshift = "/home/andres/.config/"
 redshift = "redshift.conf"
 
+
+#---------------- save automatisation ----------------
+
 def saveConfigs(pathFile, file):
 
 
@@ -27,7 +33,9 @@ def saveConfigs(pathFile, file):
        print(f"file {file} update successfully")
     else:
        print(f"El archivo {file} NO existe")
-   
+
+
+# 
 saveConfigs(pathBashrc, bashrc)
 saveConfigs(pathVim, vim)
 saveConfigs(pathNvim, nvim)
