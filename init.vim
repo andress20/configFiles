@@ -37,11 +37,12 @@ nmap <C-a> gg<S-v><S-g>
 nmap <CR> :tabnew<CR>
 imap ( ()<left>
 imap { {}<left>
+imap lg. console.log(
 inoremap {<cr> {<cr>}<ESC><S-o>
 imap [ []<left>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
-
+inoremap ` <c-r>=QuoteDelim("`")<CR>
 
 function QuoteDelim(char)
  let line = getline('.')
