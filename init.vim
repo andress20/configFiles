@@ -9,13 +9,17 @@ set number
 set relativenumber
 set laststatus=2
 set mouse=a
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set shiftround
 let mapleader = "g"
 set spelllang=en,es
 filetype on
+"In order to be able to install plugins let's install vim-plug Manager
+"run on terminal the command below:
+"curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"And then run :PlugInstall
 call plug#begin('~/.config/nvim/plugged')
 Plug 'https://github.com/preservim/nerdtree.git' "file manager
 Plug 'https://github.com/Haron-Prime/evening_vim.git' "colorscheme
@@ -37,9 +41,9 @@ nmap <C-a> gg<S-v><S-g>
 nmap <CR> :tabnew<CR>
 imap ( ()<left>
 imap { {}<left>
-imap lg. console.log(
-inoremap {<cr> {<cr>}<ESC><S-o>
+imap <C-L>. console.log(
 imap [ []<left>
+inoremap {<cr> {<cr>}<ESC><S-o>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 inoremap ` <c-r>=QuoteDelim("`")<CR>
