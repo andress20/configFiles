@@ -25,6 +25,7 @@ Plug 'https://github.com/preservim/nerdtree.git' "file manager
 Plug 'https://github.com/Haron-Prime/evening_vim.git' "colorscheme
 Plug 'https://github.com/itchyny/lightline.vim.git' "color bottom bar
 Plug 'https://github.com/preservim/nerdcommenter.git' "commenter plugin
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete and more tools
 call plug#end()
 
 colorscheme evening
@@ -39,6 +40,7 @@ map <Tab> gt
 map <C-ñ> <ESC>:w<CR>
 nmap <C-a> gg<S-v><S-g>
 nmap <CR> :tabnew<CR>
+nmap <silent> gd <Plug>(coc-definition)
 imap ( ()<left>
 imap { {}<left>
 imap <C-L>. console.log(
@@ -47,7 +49,6 @@ inoremap {<cr> {<cr>}<ESC><S-o>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 inoremap ` <c-r>=QuoteDelim("`")<CR>
-
 function QuoteDelim(char)
  let line = getline('.')
  let col = col('.')
