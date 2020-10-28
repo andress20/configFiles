@@ -4,43 +4,56 @@
 "let &packpath=&runtimepath
 "source ~/.vimrc
 "this file must to be save in ~/.config/nvim directory
+
+"SETUP
+
 set title
 set number
 set relativenumber
 set laststatus=2
 set mouse=a
+set showcmd
+set encoding=utf-8
+set clipboard=unnamed
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set shiftround
-let mapleader = "g"
 set spelllang=en,es
+let mapleader = " "
+let NERDTreeQuitOnOpen=1
+syntax enable
 filetype on
-"In order to be able to install plugins let's install vim-plug Manager
-"run on terminal the command below:
-"curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"And then run :PlugInstall
+
+"Pluggins (vim Plug Manager)
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'https://github.com/preservim/nerdtree.git' "file manager
-Plug 'https://github.com/Haron-Prime/evening_vim.git' "colorscheme
+Plug 'morhetz/gruvbox' "colorscheme
 Plug 'https://github.com/itchyny/lightline.vim.git' "color bottom bar
 Plug 'https://github.com/preservim/nerdcommenter.git' "commenter plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete and more tools
+"Plug 'https://github.com/yegappan/taglist.git'
+"Plug 'yegappan/taglist'
+Plug 'easymotion/vim-easymotion'
+Plug 'christoomey/vim-tmux-navigator' "move between split-panels
 call plug#end()
 
-colorscheme evening
+colorscheme gruvbox
+let g:gruvbox_constrat_dark = "hard"
+
 
 "Mappings
+
 map <C-n> :NERDTreeToggle<CR>
-map <C-h> <C-W><C-H>
-map <C-l> <C-W><C-L>
-map <C-j> <C-W><C-J>
-map <C-k> <C-W><C-K>
 map <Tab> gt
 map <C-ñ> <ESC>:w<CR>
+nmap <Leader>s <Plug>(easymotion-s2)
 nmap <C-a> gg<S-v><S-g>
 nmap <CR> :tabnew<CR>
 nmap <silent> gd <Plug>(coc-definition)
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q<CR>
 imap ( ()<left>
 imap { {}<left>
 imap <C-L>. console.log(
@@ -49,6 +62,9 @@ inoremap {<cr> {<cr>}<ESC><S-o>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 inoremap ` <c-r>=QuoteDelim("`")<CR>
+
+"FUNCTIONS
+
 function QuoteDelim(char)
  let line = getline('.')
  let col = col('.')
