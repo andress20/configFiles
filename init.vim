@@ -33,32 +33,47 @@ Plug 'morhetz/gruvbox' "colorscheme
 Plug 'https://github.com/itchyny/lightline.vim.git' "color bottom bar
 Plug 'https://github.com/preservim/nerdcommenter.git' "commenter plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete and more tools
-"Plug 'https://github.com/yegappan/taglist.git'
-"Plug 'yegappan/taglist'
-Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion' "search words and go there
 Plug 'christoomey/vim-tmux-navigator' "move between split-panels
+Plug 'https://github.com/tpope/vim-surround.git' "type () over a word 
+Plug 'matze/vim-move' "swap lines up / down
+Plug 'alvan/vim-closetag' " close auto html tags
+" these next 3 lines are FZF files searcher
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+"FZF need install next 5 dependencies (https://www.chrisatmachine.com/Neovim/08-fzf/)
+"sudo apt install fzf
+"sudo apt install ripgrep
+"sudo apt install universal-ctags
+"sudo apt install silversearcher-ag
+"sudo apt install fd-find
+
 call plug#end()
+
 
 colorscheme gruvbox
 let g:gruvbox_constrat_dark = "hard"
-
-
+let g:closetag_filenames= '*.js'
 "Mappings
 
 map <C-n> :NERDTreeToggle<CR>
 map <Tab> gt
 map <C-ñ> <ESC>:w<CR>
-nmap <Leader>s <Plug>(easymotion-s2)
-nmap <C-a> gg<S-v><S-g>
-nmap <CR> :tabnew<CR>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-imap ( ()<left>
-imap { {}<left>
-imap <C-L>. console.log(
-imap [ []<left>
+nnoremap <Leader>s <Plug>(easymotion-s2)
+nnoremap <C-a> gg<S-v><S-g>
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>g :Rg<CR>
+inoremap <C-L>. console.log(
+inoremap { {}<left>
+inoremap ( ()<left>
+inoremap [ []<left>
 inoremap {<cr> {<cr>}<ESC><S-o>
+inoremap (<cr> (<cr>)<ESC><S-o>
+inoremap [<cr> [<cr>]<ESC><S-o>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 inoremap ` <c-r>=QuoteDelim("`")<CR>

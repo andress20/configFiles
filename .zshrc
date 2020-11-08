@@ -125,4 +125,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+node=~/anaconda3/envs/makeitreal/node
 

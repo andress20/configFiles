@@ -2,7 +2,7 @@ import os
 from shutil import copyfile
 
 # where you want to save all config files
-pathConfigs = "/home/andres/repositorios/"
+pathConfigs = "/home/andres/repositorios/configFiles/"
 
 
 #--------------- list of files, path and name--------------
