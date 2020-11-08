@@ -11,17 +11,22 @@ export ZSH="/home/andres/.oh-my-zsh"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
-POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_DISABLE_RPROMPT=false
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="  "
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_ubuntu_icon dir vcs)
 
+#POWERLEVEL9K_ANACONDA_LEFT_DELIMITER="("
+#POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=")"
+POWERLEVEL9K_ANACONDA_BACKGROUND='green'
+
 POWERLEVEL9K_CUSTOM_UBUNTU_ICON="echo "
 POWERLEVEL9K_CUSTOM_UBUNTU_ICON_BACKGROUND=233
 POWERLEVEL9K_CUSTOM_UBUNTU_ICON_FOREGROUND=90
 
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs os_icon anaconda)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,9 +116,13 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+ #alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-__conda_setup="$('/home/andres/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/andres/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -125,5 +134,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-node=~/anaconda3/envs/makeitreal/node
-

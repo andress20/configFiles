@@ -30,7 +30,9 @@ filetype on
 call plug#begin('~/.config/nvim/plugged')
 Plug 'https://github.com/preservim/nerdtree.git' "file manager
 Plug 'morhetz/gruvbox' "colorscheme
-Plug 'https://github.com/itchyny/lightline.vim.git' "color bottom bar
+Plug 'itchyny/lightline.vim' "color bottom bar
+Plug 'itchyny/vim-gitbranch'
+"Plug 'https://github.com/itchyny/lightline.vim.git' "color bottom bar
 Plug 'https://github.com/preservim/nerdcommenter.git' "commenter plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete and more tools
 Plug 'easymotion/vim-easymotion' "search words and go there
@@ -55,6 +57,17 @@ call plug#end()
 colorscheme gruvbox
 let g:gruvbox_constrat_dark = "hard"
 let g:closetag_filenames= '*.js'
+"show git branch name on the bar
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
+
 "Mappings
 
 map <C-n> :NERDTreeToggle<CR>
