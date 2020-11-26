@@ -46,6 +46,10 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'nathanaelkane/vim-indent-guides'
+" these next 3 lines are FZF files searcher
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 "FZF need install next 5 dependencies (https://www.chrisatmachine.com/Neovim/08-fzf/)
 "sudo apt install fzf
 "sudo apt install ripgrep
@@ -83,6 +87,7 @@ nnoremap <Leader>q :q<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>g :Rg<CR>
 inoremap <C-L>. console.log()<left>
+inoremap <C-L>. console.log(
 inoremap { {}<left>
 inoremap ( ()<left>
 inoremap [ []<left>
