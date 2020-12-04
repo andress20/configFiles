@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/andres/.oh-my-zsh"
+conda activate react
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -139,7 +140,8 @@ source $ZSH/oh-my-zsh.sh
  #alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 node=~/anaconda3/envs/makeitreal/node
-
+alias front="~/makeitreal/repos/proyecto-top/src"
+alias back="~/makeitreal/repos/bbdd/alamesa-server/src"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
