@@ -4,8 +4,8 @@
 "let &packpath=&runtimepath
 "source ~/.vimrc
 "this file must to be save in ~/.config/nvim directory
-
 "highlight clear SpellBad 
+
 set title
 set number
 set relativenumber
