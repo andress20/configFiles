@@ -3,7 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/andres/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -16,16 +15,25 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="  "
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_ubuntu_icon dir vcs)
+#if I want me custom icon
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_ubuntu_icon dir vcs)
+#POWERLEVEL9K_CUSTOM_UBUNTU_ICON="echo "
 
-#POWERLEVEL9K_ANACONDA_LEFT_DELIMITER="("
-#POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=")"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+
+#Color left prompt
+POWERLEVEL9K_DIR_HOME_BACKGROUND='247'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='247'
+POWERLEVEL9K_DIR_ETC_BACKGROUND='247'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='247'
+
+
+
+POWERLEVEL9K_CUSTOM_UBUNTU_ICON_BACKGROUND='236'
+POWERLEVEL9K_CUSTOM_UBUNTU_ICON_FOREGROUND='015'
+
+#CONDA ON THE LEFT PROMPT 
 POWERLEVEL9K_ANACONDA_BACKGROUND='green'
-
-POWERLEVEL9K_CUSTOM_UBUNTU_ICON="echo "
-POWERLEVEL9K_CUSTOM_UBUNTU_ICON_BACKGROUND=233
-POWERLEVEL9K_CUSTOM_UBUNTU_ICON_FOREGROUND=90
-
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs os_icon anaconda)
 
 # Set list of themes to pick from when loading at random
@@ -119,7 +127,10 @@ source $ZSH/oh-my-zsh.sh
  #alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 node=~/anaconda3/envs/makeitreal/node
-
+front=~/makeitreal/repos/proyecto-top/src
+back=~/makeitreal/repos/bbdd/alamesa-server/src
+swap=~/.local/share/nvim/swap
+#mongod="mongod --dbpath ~/Documents/programming/data/db"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -135,3 +146,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export PATH="/opt/apps-aristocratos/bashtop/:$PATH"
+export PATH="/opt/apps-aristocratos/bpytop/:$PATH"
+conda activate react

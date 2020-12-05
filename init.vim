@@ -1,12 +1,11 @@
+""set runtimepath^=~/.vim runtimepath+=/.vim/after
 "those 3 lines below let share configuration between vim and 
 "nevim just in case I want back to vim my configuration remain save
-""set runtimepath^=~/.vim runtimepath+=/.vim/after
 "let &packpath=&runtimepath
 "source ~/.vimrc
 "this file must to be save in ~/.config/nvim directory
 
-"SETUP
-
+"highlight clear SpellBad 
 set title
 set number
 set relativenumber
@@ -15,9 +14,7 @@ set mouse=a
 set showcmd
 set encoding=utf-8
 set clipboard=unnamed
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab cindent ai si
 set shiftround
 set spelllang=en,es
 let mapleader = " "
@@ -39,10 +36,15 @@ Plug 'christoomey/vim-tmux-navigator' "move between split-panels
 Plug 'https://github.com/tpope/vim-surround.git' "type () over a word 
 Plug 'matze/vim-move' "swap lines up / down
 Plug 'alvan/vim-closetag' " close auto html tags
-" these next 3 lines are FZF files searcher
+Plug 'maxmellon/vim-jsx-pretty' "JSX color tags
+Plug 'styled-components/vim-styled-components' "recordar mirar estos 2 pulg
+"para stylecomponent mas adelante
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"these next 3 lines are FZF files searcher
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+Plug 'nathanaelkane/vim-indent-guides'
 "FZF need install next 5 dependencies (https://www.chrisatmachine.com/Neovim/08-fzf/)
 "sudo apt install fzf
 "sudo apt install ripgrep
@@ -56,6 +58,7 @@ call plug#end()
 colorscheme gruvbox
 let g:gruvbox_constrat_dark = "hard"
 let g:closetag_filenames= '*.js'
+"let g:deoplete#enable_at_startup = 1 "recorar mirar mas adelante
 "show git branch name on the bar
 let g:lightline = {
       \ 'active': {
@@ -69,17 +72,18 @@ let g:lightline = {
 
 "Mappings
 
+"map f l
+"map d h
 map <C-n> :NERDTreeToggle<CR>
 map <Tab> gt
-map <C-ñ> <ESC>:w<CR>
-nnoremap <Leader>s <Plug>(easymotion-s2)
+map <Leader>s <Plug>(easymotion-s2)
+nmap <silent> gd <Plug>(coc-definition)
 nnoremap <C-a> gg<S-v><S-g>
-nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>g :Rg<CR>
-inoremap <C-L>. console.log(
+inoremap <C-L>. console.log()<left>
 inoremap { {}<left>
 inoremap ( ()<left>
 inoremap [ []<left>
