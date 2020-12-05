@@ -41,7 +41,6 @@ Plug 'styled-components/vim-styled-components' "recordar mirar estos 2 pulg
 "para stylecomponent mas adelante
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "these next 3 lines are FZF files searcher
-" these next 3 lines are FZF files searcher
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
