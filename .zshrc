@@ -127,8 +127,8 @@ source $ZSH/oh-my-zsh.sh
  #alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 node=~/anaconda3/envs/makeitreal/node
-front=~/makeitreal/repos/proyecto-top/src
-back=~/makeitreal/repos/bbdd/alamesa-server/src
+front=~/makeitreal/repos/develop/proyecto-top/src
+back=~/makeitreal/repos/develop/alamesa-server/src
 swap=~/.local/share/nvim/swap
 #mongod="mongod --dbpath ~/Documents/programming/data/db"
 
