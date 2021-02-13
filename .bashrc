@@ -1,7 +1,7 @@
 # Switch to ZSH shell
-if test -t 1; then
-exec zsh
-fi
+#if test -t 1; then
+#exec zsh
+#fi
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -138,3 +138,4 @@ unset __conda_setup
 export PATH="/opt/apps-aristocratos/bashtop/:$PATH"
 export PATH="/opt/apps-aristocratos/bpytop/:$PATH"
 node=~/anaconda3/envs/makeitreal/node
+source "$HOME/.cargo/env"

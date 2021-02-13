@@ -26,17 +26,15 @@ redshift = "redshift.conf"
 pathZsh = "/home/andres/"
 zsh = ".zshrc"
 
-#---------------- save automatisation ----------------
+#---------------- automatic save ----------------
 
 def saveConfigs(pathFile, file):
-
 
     if os.path.exists(f"{pathFile}{file}"):
        copyfile(f"{pathFile}{file}", f"{pathConfigs}{file}") 
        print(f"file {file} update successfully.")
     else:
        print(f"File {file} doesn't exist.")
-
 
 # 
 saveConfigs(pathBashrc, bashrc)

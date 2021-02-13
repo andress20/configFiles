@@ -97,6 +97,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs os_icon anaconda)
 plugins=(
 	git
 	zsh-autosuggestions
+  #zsh-syntax-highlighting
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -127,8 +128,10 @@ source $ZSH/oh-my-zsh.sh
  #alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 node=~/anaconda3/envs/makeitreal/node
-front=~/makeitreal/repos/develop/proyecto-top/src
-back=~/makeitreal/repos/develop/alamesa-server/src
+front=~/makeitreal/repos/StackTraining/stack-training-frontend
+back=~/makeitreal/repos/StackTraining/stack-training-backend
+frontalamesa=~/makeitreal/repos/develop/proyecto-top
+backalamesa=~/makeitreal/repos/develop/alamesa-server
 swap=~/.local/share/nvim/swap
 #mongod="mongod --dbpath ~/Documents/programming/data/db"
 
