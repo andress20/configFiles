@@ -18,6 +18,16 @@ vim = ".vimrc"
 pathNvim = "/home/andres/.config/nvim/"
 nvim = "init.vim"
 
+pathFunctions = "/home/andres/.config/nvim/"
+nvimFunctions = "functions.vim"
+
+pathMaps = "/home/andres/.config/nvim/"
+nvimMaps = "maps.vim"
+
+pathPlugins = "/home/andres/.config/nvim/"
+nvimPlugins = "plugins.vim"
+
+
 #REDSHIFT
 pathRedshift = "/home/andres/.config/"
 redshift = "redshift.conf"
@@ -40,5 +50,8 @@ def saveConfigs(pathFile, file):
 saveConfigs(pathBashrc, bashrc)
 saveConfigs(pathVim, vim)
 saveConfigs(pathNvim, nvim)
+saveConfigs(pathFunctions, nvimFunctions)
+saveConfigs(pathMaps, nvimMaps)
+saveConfigs(pathPlugins, nvimPlugins)
 saveConfigs(pathRedshift, redshift)
 saveConfigs(pathZsh, zsh)
