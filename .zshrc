@@ -1,13 +1,21 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/andres/.oh-my-zsh"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
 POWERLEVEL9K_DISABLE_RPROMPT=false
@@ -71,6 +79,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs os_icon anaconda)
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -97,7 +107,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs os_icon anaconda)
 plugins=(
 	git
 	zsh-autosuggestions
-  #zsh-syntax-highlighting
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -125,15 +134,16 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
- #alias zshconfig="mate ~/.zshrc"
+# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-node=~/anaconda3/envs/makeitreal/node
-front=~/makeitreal/repos/StackTraining/stack-training-frontend
-back=~/makeitreal/repos/StackTraining/stack-training-backend
-frontalamesa=~/makeitreal/repos/develop/proyecto-top
-backalamesa=~/makeitreal/repos/develop/alamesa-server
-swap=~/.local/share/nvim/swap
-#mongod="mongod --dbpath ~/Documents/programming/data/db"
+alias repos="~/Documents/repos"
+alias react="conda activate react"
+alias angular="conda activate angular"
+alias n="nvim"
+alias swap=~/.local/share/nvim/swap
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -149,6 +159,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH="/opt/apps-aristocratos/bashtop/:$PATH"
-export PATH="/opt/apps-aristocratos/bpytop/:$PATH"
-conda activate react
+

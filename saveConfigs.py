@@ -2,17 +2,13 @@ import os
 from shutil import copyfile
 
 # where you want to save all config files
-pathConfigs = "/home/andres/repositorios/configFiles/"
+pathConfigs = "/home/andres/Documents/repos/personal/configFiles/"
 
 
 #--------------- list of files, path and name--------------
 #BASHRC
 pathBashrc = "/home/andres/"
 bashrc = ".bashrc"
-
-#VIMRC
-pathVim = "/home/andres/"
-vim = ".vimrc"
 
 #NEOVIM
 pathNvim = "/home/andres/.config/nvim/"
@@ -26,11 +22,6 @@ nvimMaps = "maps.vim"
 
 pathPlugins = "/home/andres/.config/nvim/"
 nvimPlugins = "plugins.vim"
-
-
-#REDSHIFT
-pathRedshift = "/home/andres/.config/"
-redshift = "redshift.conf"
 
 #ZSHRC
 pathZsh = "/home/andres/"
@@ -48,10 +39,8 @@ def saveConfigs(pathFile, file):
 
 # 
 saveConfigs(pathBashrc, bashrc)
-saveConfigs(pathVim, vim)
 saveConfigs(pathNvim, nvim)
 saveConfigs(pathFunctions, nvimFunctions)
 saveConfigs(pathMaps, nvimMaps)
 saveConfigs(pathPlugins, nvimPlugins)
-saveConfigs(pathRedshift, redshift)
 saveConfigs(pathZsh, zsh)
