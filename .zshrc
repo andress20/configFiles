@@ -139,7 +139,7 @@ source $ZSH/oh-my-zsh.sh
 alias repos="~/Documents/repos"
 alias react="conda activate react"
 alias angular="conda activate angular"
-alias n="nvim"
+alias nv="nvim"
 alias swap=~/.local/share/nvim/swap
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

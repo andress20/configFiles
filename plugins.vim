@@ -6,7 +6,7 @@ Plug 'morhetz/gruvbox' "colorscheme
 Plug 'itchyny/lightline.vim' "color bottom bar
 Plug 'itchyny/vim-gitbranch'
 Plug 'https://github.com/preservim/nerdcommenter.git' "commenter plugin
-Plug 'neoclide/coc.nvim' "Autocomplete and more tools
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete and more tools
 Plug 'easymotion/vim-easymotion' "search words and go there
 Plug 'christoomey/vim-tmux-navigator' "move between split-panels
 Plug 'https://github.com/tpope/vim-surround.git' "type () over a word 
@@ -30,5 +30,6 @@ Plug 'airblade/vim-rooter'
 "sudo apt install universal-ctags
 "sudo apt install silversearcher-ag
 "sudo apt install fd-find
-
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()

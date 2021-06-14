@@ -37,4 +37,6 @@ let g:lightline = {
       \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
-
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-l>"
+"let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'.config/nvim/snips/']
