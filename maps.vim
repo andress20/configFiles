@@ -27,4 +27,13 @@ nnoremap <silent> <C-e> 10<C-e>
 nnoremap <silent> <C-y> 10<C-y>
 
 " run current file
-nnoremap <Leader>x :!node %<cr>
+noremap <Leader>x :!node %<cr>
+
+inoremap <expr> <c-j>
+   \ pumvisible() ? "\<c-n>" :
+   \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetNext', [])<cr>" :
+   \ "\<c-j>"
+inoremap <expr> <c-k>
+   \ pumvisible() ? "\<c-p>" :
+   \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetPrev', [])<cr>" :
+   \ "\<c-k>"

@@ -102,7 +102,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs os_icon anaconda)
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# Example frmat: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
@@ -142,6 +142,8 @@ alias angular="conda activate angular"
 alias nv="nvim"
 alias swap=~/.local/share/nvim/swap
 
+export PATH=$PATH:~/.local/bin
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -159,4 +161,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
