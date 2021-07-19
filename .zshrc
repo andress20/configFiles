@@ -139,7 +139,7 @@ source $ZSH/oh-my-zsh.sh
 alias repos="~/Documents/repos"
 alias react="conda activate react"
 alias angular="conda activate angular"
-alias nv="nvim"
+alias n="nvim"
 alias swap=~/.local/share/nvim/swap
 
 export PATH=$PATH:~/.local/bin

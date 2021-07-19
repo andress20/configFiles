@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Pluggins (vim Plug Manager)
 Plug 'https://github.com/preservim/nerdtree.git' "file manager
+"Plug 'jremmen/vim-ripgrep'
 Plug 'morhetz/gruvbox' "colorscheme
 Plug 'itchyny/lightline.vim' "color bottom bar
 Plug 'itchyny/vim-gitbranch'

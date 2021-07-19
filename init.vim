@@ -15,6 +15,7 @@ set spelllang=en,es
 let NERDTreeQuitOnOpen=1
 syntax on
 filetype on
+filetype plugin on
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/maps.vim
 so ~/.config/nvim/functions.vim
@@ -25,8 +26,7 @@ highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
 
-
-let g:closetag_filenames= '*.js, *.tsx' "JSX pretty close tags
+let g:closetag_filenames= '*.js, *.jsx, *.ts, *.tsx' "JSX pretty close tags
 "show git branch name on the bar
 let g:lightline = {
       \ 'active': {
