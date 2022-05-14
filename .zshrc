@@ -50,6 +50,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs os_icon anaconda)
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -139,8 +140,11 @@ source $ZSH/oh-my-zsh.sh
 alias repos="~/Documents/repos"
 alias react="conda activate react"
 alias angular="conda activate angular"
-alias n="nvim"
+alias v="nvim"
 alias swap=~/.local/share/nvim/swap
+
+#temp alias
+alias testing='~/Documents/repos/udemy/unit-testing/testing-practice'
 
 export PATH=$PATH:~/.local/bin
 

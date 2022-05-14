@@ -10,6 +10,10 @@ pathConfigs = "/home/andres/Documents/repos/personal/configFiles/"
 pathBashrc = "/home/andres/"
 bashrc = ".bashrc"
 
+#ZSHRC
+pathZsh = "/home/andres/"
+zsh = ".zshrc"
+
 #NEOVIM
 pathNvim = "/home/andres/.config/nvim/"
 nvim = "init.vim"
@@ -23,10 +27,6 @@ nvimMaps = "maps.vim"
 pathPlugins = "/home/andres/.config/nvim/"
 nvimPlugins = "plugins.vim"
 
-#ZSHRC
-pathZsh = "/home/andres/"
-zsh = ".zshrc"
-
 #---------------- automatic save ----------------
 
 def saveConfigs(pathFile, file):
@@ -39,8 +39,8 @@ def saveConfigs(pathFile, file):
 
 # 
 saveConfigs(pathBashrc, bashrc)
+saveConfigs(pathZsh, zsh)
 saveConfigs(pathNvim, nvim)
 saveConfigs(pathFunctions, nvimFunctions)
 saveConfigs(pathMaps, nvimMaps)
 saveConfigs(pathPlugins, nvimPlugins)
-saveConfigs(pathZsh, zsh)

@@ -3,7 +3,9 @@ call plug#begin('~/.config/nvim/plugged')
 "Pluggins (vim Plug Manager)
 Plug 'https://github.com/preservim/nerdtree.git' "file manager
 "Plug 'jremmen/vim-ripgrep'
-Plug 'morhetz/gruvbox' "colorscheme
+"Plug 'morhetz/gruvbox' "colorscheme
+Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'arcticicestudio/nord-vim' "colorscheme
 Plug 'itchyny/lightline.vim' "color bottom bar
 Plug 'itchyny/vim-gitbranch'
 Plug 'https://github.com/preservim/nerdcommenter.git' "commenter plugin
@@ -19,6 +21,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "completion
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'eslint/eslint'
+Plug 'dense-analysis/ale'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 "these next 3 lines are FZF files searcher

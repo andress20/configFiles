@@ -1,6 +1,5 @@
 set title
 set ruler
-andres
 set cursorline
 set number
 set relativenumber
@@ -21,8 +20,10 @@ so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/maps.vim
 so ~/.config/nvim/functions.vim
 
-colorscheme gruvbox
-let g:gruvbox_constrat_dark = "hard"
+"colorscheme gruvbox
+"let g:gruvbox_constrat_dark = "hard"
+colorscheme hybrid_material
+
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
@@ -46,3 +47,7 @@ let g:coc_snippet_next = '<c-j>'
 
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
+let g:ale_fixers = {}
+let g:ale_fixers.javascript = ['eslint']
+let g:ale_fixers.typescript = ['eslint']
+let g:ale_fix_on_save = 1
