@@ -28,6 +28,8 @@ highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
 
+"this setup of python is required for neovim in the checkHealth process
+let g:python3_host_prog = '/usr/bin/python3'
 let g:closetag_filenames= '*.js, *.jsx, *.ts, *.tsx' "JSX pretty close tags
 "show git branch name on the bar
 let g:lightline = {
@@ -51,3 +53,7 @@ let g:ale_fixers = {}
 let g:ale_fixers.javascript = ['eslint']
 let g:ale_fixers.typescript = ['eslint']
 let g:ale_fix_on_save = 1
+
+"prettier config
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0

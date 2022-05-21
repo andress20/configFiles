@@ -2,6 +2,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Pluggins (vim Plug Manager)
 Plug 'https://github.com/preservim/nerdtree.git' "file manager
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 "Plug 'jremmen/vim-ripgrep'
 "Plug 'morhetz/gruvbox' "colorscheme
 Plug 'kristijanhusak/vim-hybrid-material'

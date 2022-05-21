@@ -4,6 +4,7 @@ let mapleader = " "
 map <C-n> :NERDTreeToggle<CR>
 map <Tab> gt
 map <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>py <Plug>(Prettier)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nnoremap <C-a> gg<S-v><S-g>
@@ -28,6 +29,7 @@ nnoremap <silent> <C-y> 10<C-y>
 
 " run current file
 noremap <Leader>x :!node %<cr>
+noremap <Leader>xp :!python3 %<cr>
 
 inoremap <expr> <c-j>
    \ pumvisible() ? "\<c-n>" :
