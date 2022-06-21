@@ -136,6 +136,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zconfig="v ~/.zshrc"
+alias bconfig="v ~/.bashrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias repos="~/Documents/repos"
 alias react="conda activate react"
@@ -144,7 +145,6 @@ alias v="nvim"
 alias swap=~/.local/share/nvim/swap
 
 #temp alias
-alias testing='~/Documents/repos/udemy/unit-testing/testing-practice'
 
 export PATH=$PATH:~/.local/bin
 
