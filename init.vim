@@ -8,7 +8,7 @@ set mouse=a
 set showcmd
 set showmatch
 set encoding=utf-8
-set clipboard=unnamed
+set clipboard=unnamedplus
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab cindent ai si
 set shiftround
 set spelllang=en,es
@@ -51,7 +51,12 @@ let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 let g:ale_fixers = {}
 let g:ale_fixers.javascript = ['eslint']
-let g:ale_fixers.typescript = ['eslint']
+"let g:ale_fixers.typescript = ['eslint']
+let g:ale_fixers = {'typescript': ['standard']}
+let g:ale_linters = {
+      \ 'typescript': ['standard'],
+      \}
+
 let g:ale_fix_on_save = 1
 
 "prettier config

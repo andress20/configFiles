@@ -2,6 +2,8 @@
 let mapleader = " "
 
 map <C-n> :NERDTreeToggle<CR>
+"clean search
+map <C-z> :noh<esc><CR> 
 map <Tab> gt
 map <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>py <Plug>(Prettier)
@@ -39,3 +41,8 @@ inoremap <expr> <c-k>
    \ pumvisible() ? "\<c-p>" :
    \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetPrev', [])<cr>" :
    \ "\<c-k>"
+
+nnoremap <C-y> "+y
+vnoremap <C-y> "+y
+nnoremap <C-p> "+gP
+vnoremap <C-p> "gP
