@@ -7,7 +7,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 "Plug 'jremmen/vim-ripgrep'
 "Schema colors
 "Plug 'morhetz/gruvbox'
-
+Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim' "color bottom bar
 Plug 'itchyny/vim-gitbranch'
