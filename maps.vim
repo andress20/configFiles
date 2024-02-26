@@ -14,6 +14,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>g :Rg<CR>
+inoremap jj <ESC>
 inoremap <C-L>. console.log()<left>
 inoremap { {}<left>
 inoremap ( ()<left>
@@ -33,12 +34,14 @@ nnoremap <silent> <C-y> 10<C-y>
 noremap <Leader>x :!node %<cr>
 noremap <Leader>xp :!python3 %<cr>
 
+"move up and down between completion menu coc options 
 inoremap <expr> <c-j>
-   \ pumvisible() ? "\<c-n>" :
-   \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetNext', [])<cr>" :
+   \ coc#pum#visible() ? coc#pum#next(1) :
+   \ coc#jumpable() ? "\<cr>=coc#rpc#request('snippetNext', [])<cr>" :
    \ "\<c-j>"
+
 inoremap <expr> <c-k>
-   \ pumvisible() ? "\<c-p>" :
+   \ coc#pum#visible() ? coc#pum#prev(1) :
    \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetPrev', [])<cr>" :
    \ "\<c-k>"
 

@@ -139,6 +139,7 @@ alias zconfig="v ~/.zshrc"
 alias bconfig="v ~/.bashrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias repos="~/Documents/repos"
+alias vulcanos="~/Documents/repos/vulcanos"
 alias react="conda activate react"
 alias angular="conda activate angular"
 alias v="nvim"
@@ -147,6 +148,8 @@ alias swap=~/.local/share/nvim/swap
 #temp alias
 
 export PATH=$PATH:~/.local/bin
+export ANDROID_HOME=$HOME/Android/Sdk
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
