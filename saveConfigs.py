@@ -14,6 +14,10 @@ bashrc = ".bashrc"
 pathZsh = "/home/andres/"
 zsh = ".zshrc"
 
+#p10k
+pathp10kzsh = '/home/andres/'
+p10kzsh = '.p10k.zsh'
+
 #NEOVIM
 pathNvim = "/home/andres/.config/nvim/"
 nvim = "init.vim"
@@ -40,6 +44,7 @@ def saveConfigs(pathFile, file):
 # 
 saveConfigs(pathBashrc, bashrc)
 saveConfigs(pathZsh, zsh)
+saveConfigs(pathp10kzsh, p10kzsh)
 saveConfigs(pathNvim, nvim)
 saveConfigs(pathFunctions, nvimFunctions)
 saveConfigs(pathMaps, nvimMaps)
