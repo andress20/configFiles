@@ -49,14 +49,22 @@ let g:coc_snippet_next = '<c-j>'
 
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
-let g:ale_fixers = {}
-let g:ale_fixers.javascript = ['eslint']
-"let g:ale_fixers.typescript = ['eslint']
-let g:ale_fixers = {'typescript': ['standard']}
-let g:ale_linters = {
-      \ 'typescript': ['standard'],
-      \}
 
+" Enable ALE for ESLint
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
+\   'javascriptreact': ['eslint'],
+\   'typescriptreact': ['eslint'],
+\}
+" Auto-fix files with eslint on save
+
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
+\   'javascriptreact': ['eslint'],
+\   'typescriptreact': ['eslint'],
+\}
 let g:ale_fix_on_save = 1
 
 "prettier config

@@ -137,13 +137,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zconfig="v ~/.zshrc"
 alias bconfig="v ~/.bashrc"
+alias nconfig="v ~/.config/nvim"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias repos="~/Documents/repos"
 alias vulcanos="~/Documents/repos/vulcanos"
+alias vulcanosf="~/Documents/repos/vulcanos/vulcanos-frontend"
+alias vulcanosb="~/Documents/repos/vulcanos/vulcanos-backend"
+alias dios="~/Documents/repos/dios/mp-pharma-essence/mp-pharma-essence"
 alias react="conda activate react"
 alias angular="conda activate angular"
 alias v="nvim"
-alias swap=~/.local/share/nvim/swap
+alias swap=~/.local/state/nvim/swap
 
 #temp alias
 
