@@ -30,6 +30,13 @@ set noshowmode
 
 "this setup of python is required for neovim in the checkHealth process
 let g:python3_host_prog = '/usr/bin/python3'
+"node installed via fnm — point coc to the stable default alias
+let g:coc_node_path = '/home/andres/.local/share/fnm/aliases/default/bin/node'
+"add fnm node to PATH so node/npm providers work
+let $PATH = '/home/andres/.local/share/fnm/aliases/default/bin:' . $PATH
+"disable unused providers
+let g:loaded_ruby_provider = 0
+let g:loaded_perl_provider = 0
 let g:closetag_filenames= '*.js, *.jsx, *.ts, *.tsx' "JSX pretty close tags
 "show git branch name on the bar
 let g:lightline = {
